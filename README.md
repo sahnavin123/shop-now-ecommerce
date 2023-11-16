@@ -33,7 +33,8 @@ To run ShopNow locally, follow these steps:
    cd shopnow
 
 ### install the dependency
-npm install
+    ```bash
+    npm install
 
 ### set up environment variables
 NODE_ENV=development
