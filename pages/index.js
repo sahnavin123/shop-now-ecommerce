@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import Tshirt from "./tshirts";
 import mongoose from "mongoose";
 import Product from "@/models/Products";
 import Link from "next/link";
@@ -18,11 +16,30 @@ export default function Home({ products }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-        <img src="/bg.jpg" className=" w-full h-screen  " alt="" />
+      <div className="relative">
+        <img src="/bg.jpg" className="w-full h-screen object-cover" alt="" />\
+        <div className=" mx-2 absolute top-1/4 left-1/3 lg:top-1/4 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
+          <h1 className=" text-3xl md:text-5xl font-bold text-yellow-400 mb-4">
+            Welcome to <span className="text-indigo-500">ShopNow.com</span>
+          </h1>
+          <p className=" text-sm lg:text-lg text-gray-800 mb-2">
+            Discover a world of amazing products at your fingertips.
+          </p>
+          <p className="text-sm lg:text-lg text-gray-800 mb-2">
+            Quality, Style, and Convenience—all in one place.
+          </p>
+          <p className="text-sm lg:text-lg text-gray-800 mb-2">
+            Explore our categories and find the perfect items for you.
+          </p>
+          <p className="text-sm lg:text-lg text-gray-800 mt-6">
+            Scroll down to check out our{" "}
+            <span className="text-indigo-500 border-l-0 text-xl">latest products</span>
+            !!!
+          </p>
+        </div>
       </div>
       <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
+        <div className="container px-5 pt-8 mx-auto">
           <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
               Shop now
@@ -32,7 +49,7 @@ export default function Home({ products }) {
             </p>
           </div>
           <section className="text-gray-600 body-font mt-0">
-            <div className="container px-5 py-24 mx-auto">
+            <div className="container px-5 mx-auto">
               <div className="flex flex-wrap justify-center">
                 {Object.keys(products).length === 0 && (
                   <p>Sorry all the Tshirts are currently out of stock.</p>
