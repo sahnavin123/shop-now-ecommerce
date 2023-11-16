@@ -20,29 +20,32 @@ Explore the live demo of ShopNow [here](https://shop-now-ecommerce.vercel.app/).
 
 6. **Responsive Design:** The website is 100% responsive, ensuring a consistent and optimized experience across various devices, including desktops, tablets, and mobile phones.
 
-
-
 ## Getting Started
 
 To run ShopNow locally, follow these steps:
 
 1. Clone the repository:
 
-   ```bash
+   ```
    git clone https://github.com/your-username/shopnow.git
    cd shopnow
+   ```
 
 ### install the dependency
-    ```bash
-    npm install
+
+```
+npm install
+```
 
 ### set up environment variables
-NODE_ENV=development
-PORT=3000
-MONGODB_URI=your_mongodb_connection_string
+
+NODE_ENV=development \
+PORT=3000 \
+MONGODB_URI=your_mongodb_connection_string \
 JWT_SECRET=your_jwt_secret_key
 
 ### Run the Application
+
 npm run dev
 
 The application will be accessible at http://localhost:3000.
