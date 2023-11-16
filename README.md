@@ -39,10 +39,10 @@ npm install
 
 ### set up environment variables
 
-NODE_ENV=development \
-PORT=3000 \
-MONGODB_URI=your_mongodb_connection_string \
-JWT_SECRET=your_jwt_secret_key
+MONGO_URL=your_mongodb_connection_string \
+NEXT_PUBLIC_HOST=http://localhost:3000 \
+JWT_SECRET=your_jwt_secret_key \
+JWT_TOKEN_EXPIRATION_DATE=jwt_expiration_key
 
 ### Run the Application
 
