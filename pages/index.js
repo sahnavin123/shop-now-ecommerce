@@ -123,7 +123,6 @@ export default function Home({ products }) {
 export async function getServerSideProps(context) {
   mongoose.set("strictQuery", true);
   if (!mongoose.connections[0].readyState) {
-    console.log(process.env.MONGO_URL);
     await mongoose.connect(process.env.MONGO_URL);
   }
   let products = await Product.find({ category: "tshirt" });

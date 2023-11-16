@@ -8,7 +8,7 @@ import { MdAccountCircle } from 'react-icons/md'
 
 
 const Navbar = ({logout,  user, cart, addToCart, removeFromCart, clearCart, subTotal }) => {
-  // console.log(cart, addToCart, removeFromCart, clearCart, subTotal)
+
   const [dropdown, setDropdown] = React.useState(false)
   const[sideBar, setSideBar] = React.useState(false)
 

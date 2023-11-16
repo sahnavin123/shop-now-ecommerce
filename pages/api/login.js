@@ -7,7 +7,7 @@ var jwt = require("jsonwebtoken");
 const handler = async (req, res) => {
   if (req.method == "POST") {
     let user = await User.findOne({ email: req.body.email });
-    var bytes = CryptoJS.AES.decrypt(user.password, "secret123");
+    var bytes = CryptoJS.AES.decrypt(user.password, process.env.JWT_SECRET);
     var decryptedPass = bytes.toString(CryptoJS.enc.Utf8);
 
     if (user) {
@@ -16,7 +16,7 @@ const handler = async (req, res) => {
           { email: user.email, name: user.name },
           "jwtsecret",
           {
-            expiresIn: "2d",
+            expiresIn: process.env.JWT_TOKEN_EXPIRATION_DATE,
           }
         );
         res.status(200).json({ success: true, token });
