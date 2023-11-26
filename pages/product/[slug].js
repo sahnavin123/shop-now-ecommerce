@@ -55,9 +55,13 @@ const Slug = ({ error, buyNow, addToCart, product, variants }) => {
   };
 
   const refreshVariant = (newSize, newColor) => {
-    let url = `${process.env.NEXT_PUBLIC_HOST}/product/${variants[newColor][newSize]["slug"]}`;
+    // let url = `${process.env.NEXT_PUBLIC_HOST}/product/${variants[newColor][newSize]["slug"]}`;
     // router.push(url);
-    router.replace(url);
+    const productSlug = variants[newColor][newSize]?.slug;
+    if (productSlug) {
+      const url = `${window.location.origin}/product/${productSlug}`;
+      router.push(url);
+    }
   };
 
   if (error == 404) {
