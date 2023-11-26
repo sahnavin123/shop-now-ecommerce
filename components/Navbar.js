@@ -36,7 +36,7 @@ const Navbar = ({
 
   return (
     // <div className='fixed w-full z-10 bg-white mt-0'>
-    <div className="flex flex-col md:flex-row md:justify-start justify-center items-start py-2  shadow-md  ">
+    <div className="flex flex-col md:flex-row md:justify-start justify-center items-start py-2  shadow-md ">
       <div className="logo ml-6">
         <Link
           className=" flex md:flex-col  items-center justify-center"
@@ -55,7 +55,7 @@ const Navbar = ({
       </div>
 
       <div className="nav m-auto">
-        <ul className="flex  items-center space-x-6 font-bold md:text-xl ">
+        <ul className="flex  items-center space-x-6 font-bold md:text-xl mt-4 pb-2">
           <Link href={"/tshirts"} className="hover:text-gray-500">
             <li>Tshirts</li>
           </Link>
@@ -103,7 +103,7 @@ const Navbar = ({
         </span>
         {!user.value && (
           <Link href={"/login"}>
-            <button className=" flex  mr-2 text-white  py-2 bg-indigo-600 border-0 hover:bg-indigo-700 px-2  focus:outline-none rounded-md text-md">
+            <button className=" flex  mr-6 text-white  py-2 bg-indigo-600 border-0 hover:bg-indigo-700 px-2  focus:outline-none rounded-md text-md">
               Login
             </button>
           </Link>

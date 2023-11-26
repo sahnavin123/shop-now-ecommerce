@@ -56,7 +56,8 @@ const Slug = ({ error, buyNow, addToCart, product, variants }) => {
 
   const refreshVariant = (newSize, newColor) => {
     let url = `${process.env.NEXT_PUBLIC_HOST}/product/${variants[newColor][newSize]["slug"]}`;
-    router.push(url);
+    // router.push(url);
+    router.replace(url);
   };
 
   if (error == 404) {
